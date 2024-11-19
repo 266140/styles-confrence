@@ -52,10 +52,11 @@ table {
   Custom styles
   ========================================
 */
+
 body {
   background: #293f50;
   color: #888;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -119,15 +120,37 @@ body {
 
 /*
   ========================================
+  Rows
+  ========================================
+*/
+
+.row,
+.row-alt {
+  min-width: 960px;
+}
+.row {
+  background: #fff;
+  padding: 66px 0 44px 0;
+}
+.row-alt {
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background:    -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background:         linear-gradient(to right, #a1d3b0, #f6f1d3);
+  padding: 44px 0 22px 0;
+}
+
+/*
+  ========================================
   Typography
   ========================================
 */
 
-h1, h3, h4, h5, p {
-  margin-bottom: 22px;
-}
 h1, h2, h3, h4 {
   color: #648880;
+}
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
 }
 h1 {
   font-size: 36px;
@@ -152,33 +175,50 @@ h5 {
 strong {
   font-weight: 400;
 }
-cite, em {
+cite,
+em {
   font-style: italic;
 }
+
+/*
+  ========================================
+  Leads
+  ========================================
+*/
+
+.lead {
+  text-align: center;
+}
+.lead p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
 /*
   ========================================
   Links
   ========================================
 */
 
-a:hover {
-  color: #a9b2b9;
-  text-decoration: none;
-}
 a {
   color: #648880;
+  text-decoration: none;
 }
-p a{
+a:hover {
+  color: #a9b2b9;
+}
+p a {
   border-bottom: 1px solid #dfe2e5;
 }
 .primary-header a,
 .primary-footer a {
-  color:#fff;
+  color: #fff;
 }
 .primary-header a:hover,
 .primary-footer a:hover {
-  color: #28d7b1;
+  color: #648880;
 }
+
 /*
   ========================================
   Buttons
@@ -201,7 +241,7 @@ p a{
 }
 .btn-alt:hover {
   background: #fff;
-  color: #648880
+  color: #648880;
 }
 
 /*
@@ -213,18 +253,23 @@ p a{
 .logo {
   border-top: 4px solid #648880;
   float: left;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 44px;
   padding: 40px 0 22px 0;
+  text-transform: uppercase;
 }
 .tagline {
   margin: 66px 0 22px 0;
   text-align: right;
-}.primary-nav {
+}
+.primary-nav {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: .5px;
   text-transform: uppercase;
 }
-
 
 /*
   ========================================
@@ -242,15 +287,24 @@ p a{
   float: left;
   font-weight: 400;
 }
-.logo {
-  border-top: 4px solid #648880;
-  float: left;
-  font-size: 48px;
-  line-height: 44px;
-  padding: 40px 0 22px 0;
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  text-align: right;
 }
-
-
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
 
 /*
   ========================================
@@ -264,67 +318,58 @@ p a{
   padding: 22px 80px 66px 80px;
   text-align: center;
 }
-.hero h2{
+.hero h2 {
   font-size: 36px;
 }
 .hero p {
   font-size: 24px;
+  font-weight: 100;
 }
 .teaser a:hover h3 {
   color: #a9b2b9;
 }
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
+.teaser img {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 22px;
+  max-width: 100%
+}
 
-.nav {
-  text-align: right;
-}
-.nav li {
-  display:inline-block;
-  margin:0 10px;
-  vertical-align:top;
-}
-.nav li:last-child {
-  margin-right:0;
-}
-/*
-  ========================================
-  Rows
-  ========================================
-*/
-
-.row{
- background: #fff;
- padding: 66px 0 44px 0;
-}
-.row,
-.row-alt{
-  min-width: 960px;
-}
-.row-alt{
-  background: #cbe2c1;
-  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
-   background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
-   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
-   padding: 44px 0 22px 0;
-}
 /*
   ========================================
   Speakers
   ========================================
 */
-  
+
+.speaker {
+  margin-bottom: 44px;
+}
 .speaker-info {
   border: 1px solid #dfe2e5;
   border-radius: 5px;
   margin-top: 88px;
-  padding: 22px 0;
+  padding-bottom: 22px;
   text-align: center;
 }
-  .speaker {
-    margin-bottom: 44px;
-  }
+.speaker-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+}
 
+/*
+  ========================================
+  Venue
+  ========================================
+*/
+
+.venue-theatre {
+  margin-bottom: 66px;
+}
+.venue-hotel {
+  margin-bottom: 22px;
+}
+.venue-map {
+  height: 264px;
+}
